@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Wendwesen Wagaw</title>
+  <link rel="stylesheet" href="./CSS/aboutme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+
+</head>
+<body>
+  <!-- Navbar comes FIRST - at the very top -->
+  <nav>
+    <div class="logo">Wendwesen<span>Dev</span></div>
+    <div class="links">
+      <a href="home.html" class="nav-btn">Home</a>
+      <a href="aboutme.html" class="nav-btn active">About Me</a>
+      <a href="skills.html" class="nav-btn">Skills</a>
+      <a href="projects.html" class="nav-btn">Projects</a>
+      <a href="gallery.html" class="nav-btn">Gallery</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header content after navbar -->
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <section class="intro fade-in">
+    <div class="intro-img floating">
+      <img src="./CSS/images/wen2.jpg" alt="Wendwesen Photo">
+    </div>
+    <div class="intro-text glass-card">
+      <h2>Hi, I'm <span>Wendwesen Wagaw</span></h2>
+      <p>
+        I was born on <strong>August 11, 2002 G.C.</strong> in <strong>Sekota Woreda</strong>, located in the <strong>Wag Hemra Zone of the Amhara Region, Ethiopia</strong>.  
+        My father is <strong>Wagaw Alemu</strong> and my mother is <strong>Muluwerk Mengste</strong>. I am proud to have a large and supportive family, including <strong>four sisters</strong> and <strong>two brothers</strong>.
+      </p>
+      <p>
+        From a young age, I have been fascinated by computers and technology.  
+        Today, I am a <strong>3rd-year Information Systems undergraduate student</strong> at the <strong>University of Gondar</strong>.  
+        My dream is to become a skilled <strong>Full-Stack Developer</strong> capable of creating modern, user-friendly digital solutions.
+      </p>
+    </div>
+  </section>
+
+  <section class="education fade-in">
+    <h2 class="section-title">My Educational Journey</h2>
+    <div class="timeline">
+      <div class="timeline-card fade-in">
+        <h3>Suwrt General First Level School (Grades 1–4)</h3>
+        <p>This is where my educational journey began and my love for learning first grew.</p>
+      </div>
+      <div class="timeline-card fade-in">
+        <h3>Adwadl General First Level School (Grades 5–8)</h3>
+        <p>Here I strengthened my academic foundation and discovered my interest in ICT, mathematics, and science.</p>
+      </div>
+      <div class="timeline-card fade-in">
+        <h3>Tagay Serkalem Tzazu Secondary & Preparatory School</h3>
+        <p>
+          My high school years were challenging but rewarding.  
+          Despite difficulties, I stayed motivated and grateful to God for helping me through.  
+          My favorite subjects were <strong>ICT</strong>, <strong>Chemistry</strong>, and <strong>Mathematics</strong>.
+        </p>
+      </div>
+      <div class="timeline-card fade-in">
+        <h3>University of Gondar (Information Systems)</h3>
+        <p>
+          Currently, I'm studying Information Systems at the University of Gondar.  
+          I enjoy working with programming languages such as <strong>C++</strong>, <strong>Java</strong>, and <strong>HTML</strong>.  
+          These courses inspire my goal of becoming a professional programmer and software developer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="favorites fade-in">
+    <h2 class="section-title">My Favorites & Interests</h2>
+    <div class="fav-grid">
+      <div class="fav-item">
+        <i class="fas fa-utensils"></i>
+        <p><strong>Favorite Food:</strong> Injera</p>
+      </div>
+      <div class="fav-item">
+        <i class="fas fa-coffee"></i>
+        <p><strong>Favorite Drink:</strong> Tela</p>
+      </div>
+      <div class="fav-item">
+        <i class="fas fa-gamepad"></i>
+        <p><strong>Favorite Games:</strong> Gena and Gebeta</p>
+      </div>
+      <div class="fav-item">
+        <i class="fas fa-code"></i>
+        <p><strong>Favorite Course:</strong> Programming (C++, Java, HTML)</p>
+      </div>
+      <div class="fav-item">
+        <i class="fas fa-hands-praying"></i>
+        <p><em>"Thanks to God, I overcame every difficult time."</em></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Wendwesen Wagaw | Student Portfolio</p>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const fadeElems = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElems.forEach(el => observer.observe(el));
+
+    // Add floating animation to some elements
+    document.querySelectorAll('.fav-item, .timeline-card').forEach(el => {
+      el.style.animationDelay = `${Math.random() * 0.5}s`;
+    });
+  </script>
+</body>
+</html>
